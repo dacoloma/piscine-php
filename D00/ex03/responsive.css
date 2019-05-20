@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.row {
+    /* 
+      height: 100px;
+    */
+    display: flex;
+    justify-content: center;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: transparent;
+    max-height: 60px;
+    height: 10%;
+    margin-top: 1px;
+}
+
+.container {
+    /* border-width: 1px;
+    border-style: dashed;
+    border-color: blue; */
+    text-align: justify;
+    height: 100%;
+    max-width: 1200px;
+    width: 60%;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+}
+
+.col {
+    /* display: block;
+    */
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 1px;
+    float: left;
+    width: 5.00%;
+    height: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+.table {
+    /* margin-left: 10px;
+          margin-right: 10px;
+          padding-left: 10px;
+          padding-right: 10px; 
+    border-width: 2px;
+    border-style: solid;
+    border-color: green;
+    height: 900px;
+    */
+    margin-top: 40px;
+    text-align: center;
+}
+
+.elem {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alcalins {
+    background-color: #FE6667;
+}
+
+.terreux {
+    background-color: rgb(253, 207, 147);
+}
+
+.lanthanides {
+    background-color: rgb(247, 148, 247);
+}
+
+.actinides {
+    background-color: rgb(231, 129, 146);
+}
+
+.transition {
+    background-color: #FFB7C2;
+}
+
+.poors {
+    background-color: rgb(177, 177, 177);
+}
+
+.metalloides {
+    background-color: #CDCD9B;
+}
+
+.others {
+    background-color: #99FC99;
+}
+
+.halogenes {
+    background-color: #FFFF9A;
+}
+
+.nobles {
+    background-color: #B0EEEF;
+}
+
+.unknown {
+    background-color: #F5F5F5;
+}
+
+.num {
+    /* font-size: 10px; */
+    font-size: 0.4vw;
+    align-self: flex-end;
+}
+
+.sym {
+    /* font-size: 20px; */
+    font-size: 0.8vw;
+    align-self: center;
+    font-weight: bold;
+}
+
+.weight {
+    /* font-size: 10px; */
+    font-size: 0.4vw;
+}
+
+.solid {
+    color: black;
+}
+
+.liquid {
+    color: rgba(0, 0, 255, 0.719);
+}
+
+.gaz {
+    color: red;
+}
+
+.annexe {
+    font-size: 15px;
+    align-self: center;
+    justify-content: center;
+}
