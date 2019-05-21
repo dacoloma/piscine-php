@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Sofia';
 }
 
 .container {
@@ -15,24 +16,19 @@ body {
 .menu {
     border-width: 1px;
     border-style: solid;
+    border-color: rgb(93, 90, 83);
+    border-radius: 15px;
     max-width: 400px;
     width: 25%;
-    height: 100px;
+    height: 50px;
     -webkit-transition: height 2s;
     transition: height 2s;
     overflow: hidden;
+    padding-top: 20px;
 }
 
 .menu:hover {
-    height: 700px;
-}
-
-.left {
-    border-color: red;
-}
-
-.right {
-    border-color: blue;
+    height: 550px;
 }
 
 .dropdown {
@@ -40,14 +36,18 @@ body {
     display: inline-block;
 }
 
-
-/* .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
+.dropdown-content {
+    border-color: rgb(93, 90, 83);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    height: 330px;
+    color: black;
 }
 
+
+/*
 .dropdown:hover .dropdown-content {
     display: block;
 } */
@@ -59,10 +59,27 @@ body {
     height: 100px;
 }
 
-.left .nom {
-    background-color: rgb(255, 138, 117);
+.left {
+    color: rgb(164, 67, 60);
 }
 
-.right .nom {
-    background-color: rgb(144, 144, 255);
+.right {
+    color: rgb(158, 190, 118);
+}
+
+ul {
+    list-style: disc;
+}
+
+li {
+    padding-left: 20px;
+    margin: 20 0 20 0;
+}
+
+.price {
+    display: flex;
+    height: 115px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
