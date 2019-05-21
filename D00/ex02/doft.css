@@ -14,7 +14,7 @@ body {
 }
 
 .row {
-    display: flex; 
+    display: flex;
     padding-top: 20px;
     justify-content: center;
     width: 1720px;
@@ -35,7 +35,7 @@ body {
     padding-left: 10px;
 }
 
-.relative{
+.relative {
     position: relative;
     left: 440px;
     top: 15px;
@@ -49,6 +49,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .img-title {
     height: 130px;
     width: auto;
@@ -66,7 +67,7 @@ body {
     margin: 0 40 0;
 }
 
-.right{
+.right {
     justify-content: flex-start;
 }
 
@@ -76,13 +77,14 @@ body {
     margin-top: 5px;
 }
 
-.select{
+.select {
     border-color: red;
     border-radius: 10px;
     border-style: solid;
     border-width: 6px;
 }
-.brick{
+
+.brick {
     background-image: url(resources/brick.jpg);
     background-repeat: repeat;
     background-size: 36px;
@@ -96,7 +98,7 @@ body {
     height: 700px;
 }
 
-.middle{
+.middle {
     width: 1250px;
     height: 700px;
     display: flex;
@@ -104,13 +106,13 @@ body {
     align-items: center;
 }
 
-.cluster{
+.cluster {
     width: 1200px;
     height: auto;
 }
 
-.game{
-    background-color: rgb(140,253,142);
+.game {
+    background-color: rgb(140, 253, 142);
     border-radius: 10px;
     width: 580px;
     height: 200px;
@@ -123,42 +125,41 @@ body {
     bottom: 100;
 }
 
-.form-inline{
+.form-inline {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-input[type=text]{
+input[type=text] {
     width: 470px;
 }
 
-input[type=submit]{
+input[type=submit] {
     font-size: 20px;
     margin-left: 10px;
 }
 
-.bigger{
+.bigger {
     font-size: 35px;
 }
 
-.shadow{
+.shadow {
     text-shadow: 5px 5px 5px rgb(255, 106, 106);
 }
 
-.ikea{
+.ikea {
     position: absolute;
-    bottom: 231px;
+    bottom: 130px;
     right: 1315px;
     height: 248px;
     width: 178px;
 }
 
-.apple{
+.apple {
     position: absolute;
-    bottom: 310px;
+    bottom: 200px;
     right: 710px;
     height: 195px;
     width: 220px;
-
 }

@@ -1,911 +1,891 @@
 <html>
 
 <head>
-  <title>Mendeleïev</title>
-  <style>
-    body {
-      width: 100%;
-      height: 100%;
-    }
-
-    img {
-      width: 100px;
-      height: auto;
-    }
-
-    .row {
-      /* 
-        height: 100px;
-      */
-      border-width: 1px;
-      border-style: dashed;
-      border-color: transparent;
-      height: 60px;
-      width: 100%;
-      margin-top: 1px;
-    }
-
-    .container {
-      /* border-width: 1px;
-      border-style: dashed;
-      border-color: blue; */
-      text-align: justify;
-      height: 900px;
-      width: 1150px;
-      margin-left: 150px;
-      margin-right: 150px;
-    }
-
-    .col {
-      /* display: block;
-      */
-      border-color: transparent;
-      border-style: solid;
-      border-width: 1px;
-      margin-left: 1px;
-      float: left;
-      width: 56px;
-      height: 100%;
-      /* text-align: center; */
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .table {
-      /* margin-left: 10px;
-            margin-right: 10px;
-            padding-left: 10px;
-            padding-right: 10px; 
-      border-width: 2px;
-      border-style: solid;
-      border-color: green;
-      */
-      height: 900px;
-
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .elem {
-
-      border-style: solid;
-      border-color: black;
-      border-width: 1px;
-      
-    }
-
-    .alcalins {
-      background-color: #FE6667;
-    }
-
-    .terreux {
-      background-color: rgb(253, 207, 147);
-    }
-
-    .lanthanides {
-      background-color: rgb(247, 148, 247);
-    }
-
-    .actinides {
-      background-color: rgb(231, 129, 146);
-    }
-
-    .transition {
-      background-color: #FFB7C2;
-    }
-
-    .poors {
-      background-color: rgb(177, 177, 177);
-    }
-
-    .metalloides {
-      background-color: #CDCD9B;
-    }
-
-    .others {
-      background-color: #99FC99;
-    }
-
-    .halogenes {
-      background-color: #FFFF9A;
-    }
-
-    .nobles {
-      background-color: #B0EEEF;
-    }
-
-    .unknown {
-      background-color: #F5F5F5;
-    }
-
-    .num {
-      font-size: 10px;
-      align-self: flex-end;
-    }
-
-    .sym {
-      font-size: 20px;
-      align-self: center;
-      font-weight: bold;
-    }
-
-    .weight {
-      font-size: 10px;
-    }
-
-    .solid {
-      color: black;
-    }
-
-    .liquid {
-      color: rgba(0, 0, 255, 0.719);
-    }
-
-    .gaz {
-      color: red;
-    }
-    .annexe {
-      font-size: 15px;
-      align-self: center;
-      justify-content: center;
-    }
-  </style>
+    <title>Mendeleïev</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        img {
+            width: 100px;
+            height: auto;
+        }
+        
+        .row {
+            border-width: 1px;
+            border-style: dashed;
+            border-color: transparent;
+            height: 60px;
+            width: 100%;
+            margin-top: 1px;
+        }
+        
+        .container {
+            text-align: justify;
+            height: 900px;
+            width: 1150px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        
+        .col {
+            border-color: transparent;
+            border-style: solid;
+            border-width: 1px;
+            margin-left: 1px;
+            float: left;
+            width: 56px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .table {
+            height: 900px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .elem {
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+        }
+        
+        .alcalins {
+            background-color: #FE6667;
+        }
+        
+        .terreux {
+            background-color: rgb(253, 207, 147);
+        }
+        
+        .lanthanides {
+            background-color: rgb(247, 148, 247);
+        }
+        
+        .actinides {
+            background-color: rgb(231, 129, 146);
+        }
+        
+        .transition {
+            background-color: #FFB7C2;
+        }
+        
+        .poors {
+            background-color: rgb(177, 177, 177);
+        }
+        
+        .metalloides {
+            background-color: #CDCD9B;
+        }
+        
+        .others {
+            background-color: #99FC99;
+        }
+        
+        .halogenes {
+            background-color: #FFFF9A;
+        }
+        
+        .nobles {
+            background-color: #B0EEEF;
+        }
+        
+        .unknown {
+            background-color: #F5F5F5;
+        }
+        
+        .num {
+            font-size: 0.5vw;
+            align-self: flex-end;
+        }
+        
+        .sym {
+            font-size: 20px;
+            align-self: center;
+            font-weight: bold;
+        }
+        
+        .weight {
+            font-size: 0.5vw;
+        }
+        
+        .solid {
+            color: black;
+        }
+        
+        .liquid {
+            color: rgba(0, 0, 255, 0.719);
+        }
+        
+        .gaz {
+            color: red;
+        }
+        
+        .annexe {
+            font-size: 15px;
+            align-self: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
+    <div class="container">
 
-    <div class="center photo">
-      <img
-        src="https://i0.wp.com/lemondeetnous.cafe-sciences.org/wp-content/uploads/sites/4/2019/03/Dmitri_Mendeleev.jpg?resize=328%2C290&ssl=1">
+        <div class="center photo">
+            <img src="https://i0.wp.com/lemondeetnous.cafe-sciences.org/wp-content/uploads/sites/4/2019/03/Dmitri_Mendeleev.jpg?resize=328%2C290&ssl=1">
+        </div>
+        <div class="table" contenteditable="true">
+
+            <div class="row" id="1">
+                <div class="col elem others">
+                    <div class="num">1</div>
+                    <div class="sym gaz">H</div>
+                    <div class="weight">1,01</div>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">2</div>
+                    <div class="sym gaz">He</div>
+                    <div class="weight">4</div>
+                </div>
+            </div>
+            <div class="row" id="2">
+                <div class="col elem alcalins">
+                    <div class="num">3</div>
+                    <div class="sym">Li</div>
+                    <div class="weight">6,94</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">4</div>
+                    <div class="sym">Be</div>
+                    <div class="weight">9,01</div>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">5</div>
+                    <div class="sym">B</div>
+                    <div class="weight">10.81</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">6</div>
+                    <div class="sym">C</div>
+                    <div class="weight">12.01</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">7</div>
+                    <div class="sym gaz">N</div>
+                    <div class="weight">14.01</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">8</div>
+                    <div class="sym gaz">O</div>
+                    <div class="weight">16</div>
+                </div>
+                <div class="col elem halogenes">
+                    <div class="num">9</div>
+                    <div class="sym gaz">F</div>
+                    <div class="weight">19</div>
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">10</div>
+                    <div class="sym gaz">Ne</div>
+                    <div class="weight">20.18</div>
+                </div>
+            </div>
+            <div class="row" id="3">
+                <div class="col elem alcalins">
+                    <div class="num">11</div>
+                    <div class="sym">Na</div>
+                    <div class="weight">22.99</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">12</div>
+                    <div class="sym">Mg</div>
+                    <div class="weight">24.31</div>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col elem poors">
+                    <div class="num">13</div>
+                    <div class="sym">Al</div>
+                    <div class="weight">26.96</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">14</div>
+                    <div class="sym">Si</div>
+                    <div class="weight">28.09</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">15</div>
+                    <div class="sym">P</div>
+                    <div class="weight">30.97</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">16</div>
+                    <div class="sym">S</div>
+                    <div class="weight">32.06</div>
+                </div>
+                <div class="col elem halogenes">
+                    <div class="num">17</div>
+                    <div class="sym gaz">Cl</div>
+                    <div class="weight">35.45</div>
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">18</div>
+                    <div class="sym gaz">Ar</div>
+                    <div class="weight">39.95</div>
+                </div>
+            </div>
+            <div class="row" id="4">
+                <div class="col elem alcalins">
+                    <div class="num">19</div>
+                    <div class="sym">K</div>
+                    <div class="weight">39.10</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">20</div>
+                    <div class="sym">Ca</div>
+                    <div class="weight">40.08</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">21</div>
+                    <div class="sym">Sc</div>
+                    <div class="weight">45.96</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">22</div>
+                    <div class="sym">Ti</div>
+                    <div class="weight">47.87</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">23</div>
+                    <div class="sym">V</div>
+                    <div class="weight">50.94</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">24</div>
+                    <div class="sym">Cr</div>
+                    <div class="weight">52</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">25</div>
+                    <div class="sym">Mn</div>
+                    <div class="weight">54.94</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">26</div>
+                    <div class="sym">Fe</div>
+                    <div class="weight">55.84</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">27</div>
+                    <div class="sym">Co</div>
+                    <div class="weight">58.93</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">28</div>
+                    <div class="sym">Ni</div>
+                    <div class="weight">58.69</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">29</div>
+                    <div class="sym">Cu</div>
+                    <div class="weight">63.55</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">30</div>
+                    <div class="sym">Zn</div>
+                    <div class="weight">65.38</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">31</div>
+                    <div class="sym">Ga</div>
+                    <div class="weight">69.72</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">32</div>
+                    <div class="sym">Ge</div>
+                    <div class="weight">72.63</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">33</div>
+                    <div class="sym">As</div>
+                    <div class="weight">74.92</div>
+                </div>
+                <div class="col elem others">
+                    <div class="num">34</div>
+                    <div class="sym">Se</div>
+                    <div class="weight">78.97</div>
+                </div>
+                <div class="col elem halogenes">
+                    <div class="num">35</div>
+                    <div class="sym liquid">Br</div>
+                    <div class="weight">79.90</div>
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">36</div>
+                    <div class="sym gaz">Kr</div>
+                    <div class="weight">83.80</div>
+                </div>
+            </div>
+            <div class="row" id="5">
+                <div class="col elem alcalins">
+                    <div class="num">37</div>
+                    <div class="sym">Rb</div>
+                    <div class="weight">85.46</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">38</div>
+                    <div class="sym">Sr</div>
+                    <div class="weight">87.62</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">39</div>
+                    <div class="sym">Y</div>
+                    <div class="weight">88.90</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">40</div>
+                    <div class="sym">Zr</div>
+                    <div class="weight">91.224</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">41</div>
+                    <div class="sym">Nb</div>
+                    <div class="weight">92.90</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">42</div>
+                    <div class="sym">Mo</div>
+                    <div class="weight">95.95</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">43</div>
+                    <div class="sym">Tc</div>
+                    <div class="weight">98</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">44</div>
+                    <div class="sym">Ru</div>
+                    <div class="weight">101.07</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">45</div>
+                    <div class="sym">Rh</div>
+                    <div class="weight">102.90</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">46</div>
+                    <div class="sym">Pd</div>
+                    <div class="weight">106.42</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">47</div>
+                    <div class="sym">Ag</div>
+                    <div class="weight">107.86</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">48</div>
+                    <div class="sym">Cd</div>
+                    <div class="weight">112.41</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">49</div>
+                    <div class="sym">In</div>
+                    <div class="weight">114.81</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">50</div>
+                    <div class="sym">Sn</div>
+                    <div class="weight">118.71</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">51</div>
+                    <div class="sym">Sb</div>
+                    <div class="weight">121.76</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">52</div>
+                    <div class="sym">Te</div>
+                    <div class="weight">127.60</div>
+                </div>
+                <div class="col elem halogenes">
+                    <div class="num">53</div>
+                    <div class="sym">I</div>
+                    <div class="weight">126.90</div>
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">54</div>
+                    <div class="sym">Xe</div>
+                    <div class="weight">131.29</div>
+                </div>
+            </div>
+            <div class="row" id="6">
+                <div class="col elem alcalins">
+                    <div class="num">55</div>
+                    <div class="sym">Cs</div>
+                    <div class="weight">132.90</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">56</div>
+                    <div class="sym">Ba</div>
+                    <div class="weight">137.32</div>
+                </div>
+                <div class="col elem lanthanides annexe">
+                    <div class="sym annexe">57-71</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">72</div>
+                    <div class="sym">Hf</div>
+                    <div class="weight">178.49</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">73</div>
+                    <div class="sym">Ta</div>
+                    <div class="weight">180.94</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">74</div>
+                    <div class="sym">W</div>
+                    <div class="weight">183.84</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">75</div>
+                    <div class="sym">Re</div>
+                    <div class="weight">186.20</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">76</div>
+                    <div class="sym">Os</div>
+                    <div class="weight">190.23</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">77</div>
+                    <div class="sym">Ir</div>
+                    <div class="weight">192.21</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">78</div>
+                    <div class="sym">Pt</div>
+                    <div class="weight">195.08</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">79</div>
+                    <div class="sym">Au</div>
+                    <div class="weight">196.96</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">80</div>
+                    <div class="sym liquid">Hg</div>
+                    <div class="weight">200.59</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">81</div>
+                    <div class="sym">Tl</div>
+                    <div class="weight">204.38</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">82</div>
+                    <div class="sym">Pb</div>
+                    <div class="weight">207.2</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">83</div>
+                    <div class="sym">Bi</div>
+                    <div class="weight">208.98</div>
+                </div>
+                <div class="col elem poors">
+                    <div class="num">84</div>
+                    <div class="sym">Po</div>
+                    <div class="weight">209</div>
+                </div>
+                <div class="col elem metalloides">
+                    <div class="num">85</div>
+                    <div class="sym">At</div>
+                    <div class="weight">210</div>
+                </div>
+                <div class="col elem nobles">
+                    <div class="num">86</div>
+                    <div class="sym">Rn</div>
+                    <div class="weight">222</div>
+                </div>
+            </div>
+            <div class="row" id="7">
+                <div class="col elem alcalins">
+                    <div class="num">87</div>
+                    <div class="sym">Fr</div>
+                    <div class="weight">223</div>
+                </div>
+                <div class="col elem terreux">
+                    <div class="num">88</div>
+                    <div class="sym">Ra</div>
+                    <div class="weight">226</div>
+                </div>
+                <div class="col elem actinides annexe">
+                    <div class="sym annexe">89-103</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">104</div>
+                    <div class="sym">Rf</div>
+                    <div class="weight">267</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">105</div>
+                    <div class="sym">Db</div>
+                    <div class="weight">268</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">106</div>
+                    <div class="sym">Sg</div>
+                    <div class="weight">269</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">107</div>
+                    <div class="sym">Bh</div>
+                    <div class="weight">270</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">108</div>
+                    <div class="sym">Hs</div>
+                    <div class="weight">277</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">109</div>
+                    <div class="sym">Mt</div>
+                    <div class="weight">278</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">110</div>
+                    <div class="sym">Ds</div>
+                    <div class="weight">281</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">111</div>
+                    <div class="sym">Rg</div>
+                    <div class="weight">282</div>
+                </div>
+                <div class="col elem transition">
+                    <div class="num">112</div>
+                    <div class="sym">Cn</div>
+                    <div class="weight">285</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">113</div>
+                    <div class="sym">Nh</div>
+                    <div class="weight">286</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">114</div>
+                    <div class="sym">Fl</div>
+                    <div class="weight">289</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">115</div>
+                    <div class="sym">Mc</div>
+                    <div class="weight">289</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">116</div>
+                    <div class="sym">Lv</div>
+                    <div class="weight">293</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">117</div>
+                    <div class="sym">Ts</div>
+                    <div class="weight">294</div>
+                </div>
+                <div class="col elem unknown">
+                    <div class="num">118</div>
+                    <div class="sym">Og</div>
+                    <div class="weight">294</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <div class="row" id="8">
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">57</div>
+                    <div class="sym">La</div>
+                    <div class="weight">138.90</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">58</div>
+                    <div class="sym">Ce</div>
+                    <div class="weight">140.11</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">59</div>
+                    <div class="sym">Pr</div>
+                    <div class="weight">140.90</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">60</div>
+                    <div class="sym">Nd</div>
+                    <div class="weight">144.24</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">61</div>
+                    <div class="sym">Pm</div>
+                    <div class="weight">145</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">62</div>
+                    <div class="sym">Sm</div>
+                    <div class="weight">150.36</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">63</div>
+                    <div class="sym">Eu</div>
+                    <div class="weight">151.96</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">64</div>
+                    <div class="sym">Gd</div>
+                    <div class="weight">157.25</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">65</div>
+                    <div class="sym">Tb</div>
+                    <div class="weight">158.92</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">66</div>
+                    <div class="sym">Dy</div>
+                    <div class="weight">162.50</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">67</div>
+                    <div class="sym">Ho</div>
+                    <div class="weight">164.93</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">68</div>
+                    <div class="sym">Er</div>
+                    <div class="weight">167.25</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">69</div>
+                    <div class="sym">Tm</div>
+                    <div class="weight">168.93</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">70</div>
+                    <div class="sym">Yb</div>
+                    <div class="weight">173.04</div>
+                </div>
+                <div class="col elem lanthanides">
+                    <div class="num">71</div>
+                    <div class="sym">Lu</div>
+                    <div class="weight">174.96</div>
+                </div>
+            </div>
+            <div class="row" id="9">
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">89</div>
+                    <div class="sym">Ac</div>
+                    <div class="weight">227</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">90</div>
+                    <div class="sym">Th</div>
+                    <div class="weight">232.03</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">91</div>
+                    <div class="sym">Pa</div>
+                    <div class="weight">231.03</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">92</div>
+                    <div class="sym">U</div>
+                    <div class="weight">238.02</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">93</div>
+                    <div class="sym">Np</div>
+                    <div class="weight">237</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">94</div>
+                    <div class="sym">Pu</div>
+                    <div class="weight">244</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">95</div>
+                    <div class="sym">Am</div>
+                    <div class="weight">243</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">96</div>
+                    <div class="sym">Cm</div>
+                    <div class="weight">247</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">97</div>
+                    <div class="sym">Bk</div>
+                    <div class="weight">247</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">98</div>
+                    <div class="sym">Cf</div>
+                    <div class="weight">251</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">99</div>
+                    <div class="sym">Es</div>
+                    <div class="weight">252</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">100</div>
+                    <div class="sym">Fm</div>
+                    <div class="weight">257</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">101</div>
+                    <div class="sym">Md</div>
+                    <div class="weight">258</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">102</div>
+                    <div class="sym">No</div>
+                    <div class="weight">259</div>
+                </div>
+                <div class="col elem actinides">
+                    <div class="num">103</div>
+                    <div class="sym">Lr</div>
+                    <div class="weight">266</div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="table" contenteditable="true">
-
-      <div class="row" id="1">
-        <div class="col elem others">
-          <div class="num">1</div>
-          <div class="sym gaz">H</div>
-          <div class="weight">1,01</div>
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col elem nobles">
-          <div class="num">2</div>
-          <div class="sym gaz">He</div>
-          <div class="weight">4</div>
-        </div>
-      </div>
-      <div class="row" id="2">
-        <div class="col elem alcalins">
-          <div class="num">3</div>
-          <div class="sym">Li</div>
-          <div class="weight">6,94</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">4</div>
-          <div class="sym">Be</div>
-          <div class="weight">9,01</div>
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">5</div>
-          <div class="sym">B</div>
-          <div class="weight">10.81</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">6</div>
-          <div class="sym">C</div>
-          <div class="weight">12.01</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">7</div>
-          <div class="sym gaz">N</div>
-          <div class="weight">14.01</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">8</div>
-          <div class="sym gaz">O</div>
-          <div class="weight">16</div>
-        </div>
-        <div class="col elem halogenes">
-          <div class="num">9</div>
-          <div class="sym gaz">F</div>
-          <div class="weight">19</div>
-        </div>
-        <div class="col elem nobles">
-          <div class="num">10</div>
-          <div class="sym gaz">Ne</div>
-          <div class="weight">20.18</div>
-        </div>
-      </div>
-      <div class="row" id="3">
-        <div class="col elem alcalins">
-          <div class="num">11</div>
-          <div class="sym">Na</div>
-          <div class="weight">22.99</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">12</div>
-          <div class="sym">Mg</div>
-          <div class="weight">24.31</div>
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col elem poors">
-          <div class="num">13</div>
-          <div class="sym">Al</div>
-          <div class="weight">26.96</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">14</div>
-          <div class="sym">Si</div>
-          <div class="weight">28.09</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">15</div>
-          <div class="sym">P</div>
-          <div class="weight">30.97</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">16</div>
-          <div class="sym">S</div>
-          <div class="weight">32.06</div>
-        </div>
-        <div class="col elem halogenes">
-          <div class="num">17</div>
-          <div class="sym gaz">Cl</div>
-          <div class="weight">35.45</div>
-        </div>
-        <div class="col elem nobles">
-          <div class="num">18</div>
-          <div class="sym gaz">Ar</div>
-          <div class="weight">39.95</div>
-        </div>
-      </div>
-      <div class="row" id="4">
-        <div class="col elem alcalins">
-          <div class="num">19</div>
-          <div class="sym">K</div>
-          <div class="weight">39.10</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">20</div>
-          <div class="sym">Ca</div>
-          <div class="weight">40.08</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">21</div>
-          <div class="sym">Sc</div>
-          <div class="weight">45.96</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">22</div>
-          <div class="sym">Ti</div>
-          <div class="weight">47.87</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">23</div>
-          <div class="sym">V</div>
-          <div class="weight">50.94</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">24</div>
-          <div class="sym">Cr</div>
-          <div class="weight">52</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">25</div>
-          <div class="sym">Mn</div>
-          <div class="weight">54.94</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">26</div>
-          <div class="sym">Fe</div>
-          <div class="weight">55.84</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">27</div>
-          <div class="sym">Co</div>
-          <div class="weight">58.93</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">28</div>
-          <div class="sym">Ni</div>
-          <div class="weight">58.69</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">29</div>
-          <div class="sym">Cu</div>
-          <div class="weight">63.55</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">30</div>
-          <div class="sym">Zn</div>
-          <div class="weight">65.38</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">31</div>
-          <div class="sym">Ga</div>
-          <div class="weight">69.72</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">32</div>
-          <div class="sym">Ge</div>
-          <div class="weight">72.63</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">33</div>
-          <div class="sym">As</div>
-          <div class="weight">74.92</div>
-        </div>
-        <div class="col elem others">
-          <div class="num">34</div>
-          <div class="sym">Se</div>
-          <div class="weight">78.97</div>
-        </div>
-        <div class="col elem halogenes">
-          <div class="num">35</div>
-          <div class="sym liquid">Br</div>
-          <div class="weight">79.90</div>
-        </div>
-        <div class="col elem nobles">
-          <div class="num">36</div>
-          <div class="sym gaz">Kr</div>
-          <div class="weight">83.80</div>
-        </div>
-      </div>
-      <div class="row" id="5">
-        <div class="col elem alcalins">
-          <div class="num">37</div>
-          <div class="sym">Rb</div>
-          <div class="weight">85.46</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">38</div>
-          <div class="sym">Sr</div>
-          <div class="weight">87.62</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">39</div>
-          <div class="sym">Y</div>
-          <div class="weight">88.90</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">40</div>
-          <div class="sym">Zr</div>
-          <div class="weight">91.224</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">41</div>
-          <div class="sym">Nb</div>
-          <div class="weight">92.90</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">42</div>
-          <div class="sym">Mo</div>
-          <div class="weight">95.95</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">43</div>
-          <div class="sym">Tc</div>
-          <div class="weight">98</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">44</div>
-          <div class="sym">Ru</div>
-          <div class="weight">101.07</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">45</div>
-          <div class="sym">Rh</div>
-          <div class="weight">102.90</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">46</div>
-          <div class="sym">Pd</div>
-          <div class="weight">106.42</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">47</div>
-          <div class="sym">Ag</div>
-          <div class="weight">107.86</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">48</div>
-          <div class="sym">Cd</div>
-          <div class="weight">112.41</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">49</div>
-          <div class="sym">In</div>
-          <div class="weight">114.81</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">50</div>
-          <div class="sym">Sn</div>
-          <div class="weight">118.71</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">51</div>
-          <div class="sym">Sb</div>
-          <div class="weight">121.76</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">52</div>
-          <div class="sym">Te</div>
-          <div class="weight">127.60</div>
-        </div>
-        <div class="col elem halogenes">
-          <div class="num">53</div>
-          <div class="sym">I</div>
-          <div class="weight">126.90</div>
-        </div>
-        <div class="col elem nobles">
-          <div class="num">54</div>
-          <div class="sym">Xe</div>
-          <div class="weight">131.29</div>
-        </div>
-      </div>
-      <div class="row" id="6">
-        <div class="col elem alcalins">
-          <div class="num">55</div>
-          <div class="sym">Cs</div>
-          <div class="weight">132.90</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">56</div>
-          <div class="sym">Ba</div>
-          <div class="weight">137.32</div>
-        </div>
-        <div class="col elem lanthanides annexe">
-            <div class="sym annexe">57-71</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">72</div>
-          <div class="sym">Hf</div>
-          <div class="weight">178.49</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">73</div>
-          <div class="sym">Ta</div>
-          <div class="weight">180.94</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">74</div>
-          <div class="sym">W</div>
-          <div class="weight">183.84</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">75</div>
-          <div class="sym">Re</div>
-          <div class="weight">186.20</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">76</div>
-          <div class="sym">Os</div>
-          <div class="weight">190.23</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">77</div>
-          <div class="sym">Ir</div>
-          <div class="weight">192.21</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">78</div>
-          <div class="sym">Pt</div>
-          <div class="weight">195.08</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">79</div>
-          <div class="sym">Au</div>
-          <div class="weight">196.96</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">80</div>
-          <div class="sym liquid">Hg</div>
-          <div class="weight">200.59</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">81</div>
-          <div class="sym">Tl</div>
-          <div class="weight">204.38</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">82</div>
-          <div class="sym">Pb</div>
-          <div class="weight">207.2</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">83</div>
-          <div class="sym">Bi</div>
-          <div class="weight">208.98</div>
-        </div>
-        <div class="col elem poors">
-          <div class="num">84</div>
-          <div class="sym">Po</div>
-          <div class="weight">209</div>
-        </div>
-        <div class="col elem metalloides">
-          <div class="num">85</div>
-          <div class="sym">At</div>
-          <div class="weight">210</div>
-        </div>
-        <div class="col elem nobles">
-          <div class="num">86</div>
-          <div class="sym">Rn</div>
-          <div class="weight">222</div>
-        </div>
-      </div>
-      <div class="row" id="7">
-        <div class="col elem alcalins">
-          <div class="num">87</div>
-          <div class="sym">Fr</div>
-          <div class="weight">223</div>
-        </div>
-        <div class="col elem terreux">
-          <div class="num">88</div>
-          <div class="sym">Ra</div>
-          <div class="weight">226</div>
-        </div>
-        <div class="col elem actinides annexe">
-          <div class="sym annexe">89-103</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">104</div>
-          <div class="sym">Rf</div>
-          <div class="weight">267</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">105</div>
-          <div class="sym">Db</div>
-          <div class="weight">268</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">106</div>
-          <div class="sym">Sg</div>
-          <div class="weight">269</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">107</div>
-          <div class="sym">Bh</div>
-          <div class="weight">270</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">108</div>
-          <div class="sym">Hs</div>
-          <div class="weight">277</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">109</div>
-          <div class="sym">Mt</div>
-          <div class="weight">278</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">110</div>
-          <div class="sym">Ds</div>
-          <div class="weight">281</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">111</div>
-          <div class="sym">Rg</div>
-          <div class="weight">282</div>
-        </div>
-        <div class="col elem transition">
-          <div class="num">112</div>
-          <div class="sym">Cn</div>
-          <div class="weight">285</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">113</div>
-          <div class="sym">Nh</div>
-          <div class="weight">286</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">114</div>
-          <div class="sym">Fl</div>
-          <div class="weight">289</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">115</div>
-          <div class="sym">Mc</div>
-          <div class="weight">289</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">116</div>
-          <div class="sym">Lv</div>
-          <div class="weight">293</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">117</div>
-          <div class="sym">Ts</div>
-          <div class="weight">294</div>
-        </div>
-        <div class="col elem unknown">
-          <div class="num">118</div>
-          <div class="sym">Og</div>
-          <div class="weight">294</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-
-        </div>
-      </div>
-      <div class="row" id="8">
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">57</div>
-          <div class="sym">La</div>
-          <div class="weight">138.90</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">58</div>
-          <div class="sym">Ce</div>
-          <div class="weight">140.11</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">59</div>
-          <div class="sym">Pr</div>
-          <div class="weight">140.90</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">60</div>
-          <div class="sym">Nd</div>
-          <div class="weight">144.24</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">61</div>
-          <div class="sym">Pm</div>
-          <div class="weight">145</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">62</div>
-          <div class="sym">Sm</div>
-          <div class="weight">150.36</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">63</div>
-          <div class="sym">Eu</div>
-          <div class="weight">151.96</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">64</div>
-          <div class="sym">Gd</div>
-          <div class="weight">157.25</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">65</div>
-          <div class="sym">Tb</div>
-          <div class="weight">158.92</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">66</div>
-          <div class="sym">Dy</div>
-          <div class="weight">162.50</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">67</div>
-          <div class="sym">Ho</div>
-          <div class="weight">164.93</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">68</div>
-          <div class="sym">Er</div>
-          <div class="weight">167.25</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">69</div>
-          <div class="sym">Tm</div>
-          <div class="weight">168.93</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">70</div>
-          <div class="sym">Yb</div>
-          <div class="weight">173.04</div>
-        </div>
-        <div class="col elem lanthanides">
-          <div class="num">71</div>
-          <div class="sym">Lu</div>
-          <div class="weight">174.96</div>
-        </div>
-      </div>
-      <div class="row" id="9">
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col">
-        </div>
-        <div class="col elem actinides">
-          <div class="num">89</div>
-          <div class="sym">Ac</div>
-          <div class="weight">227</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">90</div>
-          <div class="sym">Th</div>
-          <div class="weight">232.03</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">91</div>
-          <div class="sym">Pa</div>
-          <div class="weight">231.03</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">92</div>
-          <div class="sym">U</div>
-          <div class="weight">238.02</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">93</div>
-          <div class="sym">Np</div>
-          <div class="weight">237</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">94</div>
-          <div class="sym">Pu</div>
-          <div class="weight">244</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">95</div>
-          <div class="sym">Am</div>
-          <div class="weight">243</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">96</div>
-          <div class="sym">Cm</div>
-          <div class="weight">247</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">97</div>
-          <div class="sym">Bk</div>
-          <div class="weight">247</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">98</div>
-          <div class="sym">Cf</div>
-          <div class="weight">251</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">99</div>
-          <div class="sym">Es</div>
-          <div class="weight">252</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">100</div>
-          <div class="sym">Fm</div>
-          <div class="weight">257</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">101</div>
-          <div class="sym">Md</div>
-          <div class="weight">258</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">102</div>
-          <div class="sym">No</div>
-          <div class="weight">259</div>
-        </div>
-        <div class="col elem actinides">
-          <div class="num">103</div>
-          <div class="sym">Lr</div>
-          <div class="weight">266</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </body>
 
 </html>
