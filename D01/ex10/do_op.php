@@ -28,7 +28,7 @@ function ft_error()
     echo "Incorrect Parameters\n";
 }
 
-if ($argc != 3) {
+if ($argc - 1== 3) {
     $x = trim($argv[1]);
     $y = trim($argv[3]);
     $op = trim($argv[2]);
