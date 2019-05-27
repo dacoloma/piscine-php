@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS films FROM film WHERE last_projection >= '1996-10-30' AND last_projection <= '1997-07-27' OR DAY(last_projection) = 24 AND MONTH(last_projection) = 12;
