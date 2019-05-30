@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BALLOON</title>
+    <style>
+        .balloon {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chartdiv" class="balloon" onclick="myFunction()"></div>
+    <!-- <div id="chartdiv" class="balloon" onclick="document.getElementById('chartdiv').style.height = '+10px';"></div> -->
+    <script>
+        function myFunction() {
+            document.getElementById('chartdiv').style.height = '10px';
+            document.getElementById('chartdiv').style.width = '10px';
+        }
+    </script>
+</body>
+
+</html>
