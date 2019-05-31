@@ -4,22 +4,54 @@
 <head>
     <title>BALLOON</title>
     <style>
-        .balloon {
+        #chartdiv {
             background-color: red;
             height: 200px;
             width: 200px;
-            border-radius: 100px;
+            border-radius: 1000px;
         }
     </style>
 </head>
 
 <body>
-    <div id="chartdiv" class="balloon" onclick="myFunction()"></div>
-    <!-- <div id="chartdiv" class="balloon" onclick="document.getElementById('chartdiv').style.height = '+10px';"></div> -->
+    <div id="chartdiv" class="balloon" onclick="gonfle()" onmouseout="degonfle(this)"></div>
     <script>
-        function myFunction() {
-            document.getElementById('chartdiv').style.height = '10px';
-            document.getElementById('chartdiv').style.width = '10px';
+        function gonfle() {
+
+            var elem = document.getElementById('chartdiv');
+            if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(255, 0, 0)") {
+                elem.style.backgroundColor = "rgb(0, 255, 0)";
+            } else if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(0, 255, 0)") {
+                elem.style.backgroundColor = "rgb(0, 0, 255)";
+            } else if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(0, 0, 255)") {
+                elem.style.backgroundColor = "rgb(255, 0, 0)";
+            }
+            if (elem.clientHeight < 420) {
+                elem.style.height = (elem.clientHeight + 10) + 'px';
+                elem.style.width = (elem.clientWidth + 10) + 'px';
+            } else {
+                elem.style.height = '200px';
+                elem.style.width = '200px';
+            }
+
+        }
+
+        function degonfle(elem) {
+            if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(255, 0, 0)") {
+                elem.style.backgroundColor = "rgb(0, 0, 255)";
+            } else if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(0, 255, 0)") {
+                elem.style.backgroundColor = "rgb(255, 0, 0)";
+            } else if (window.getComputedStyle(elem, null).getPropertyValue("background-color") == "rgb(0, 0, 255)") {
+                elem.style.backgroundColor = "rgb(0, 255, 0)";
+            }
+            if (elem.clientHeight > 200) {
+                elem.style.height = (elem.clientHeight - 5) + 'px';
+                elem.style.width = (elem.clientWidth - 5) + 'px';
+            } else {
+                elem.style.height = '200px';
+                elem.style.width = '200px';
+            }
+
         }
     </script>
 </body>
