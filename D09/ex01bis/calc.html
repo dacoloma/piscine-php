@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CALC</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <input id="left" type="text" style="width:50">
+    <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+    </select>
+    <input id="right" type="text" style="width:50">
+    <input id="calcul" type="submit" value="Try me!">
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+            $("#calcul").click(function() {
+                var left = $("#left").val();
+                var right = $("#right").val();
+                var operator = $("#operator").val();
+                const pattern = /[0-9]*$/;
+
+                if (pattern.test(left) && pattern.test(right)) {
+                    if ((operator == "/" || operator == "%") && right == 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                    } else {
+                        var res = eval(left + operator + right);
+                        alert(res);
+                        console.log(res);
+                    }
+                } else {
+                    alert("Error :(");
+                    console.log("Error :(")
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

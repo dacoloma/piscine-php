@@ -24,6 +24,7 @@ function ft_delete(item) {
 
 window.onunload = function() {
     var list = [];
+    var ft_list = document.getElementById("ft_list");
     var item = ft_list.children;
     for (var i = 0; i < item.length; i++)
         list.unshift(item[i].innerHTML);
@@ -38,4 +39,4 @@ window.onload = function() {
             ft_addtolist(item);
         });
     }
-}
+};
